@@ -46,7 +46,7 @@ const MyGallery = () => {
 
 
  const searchPictures = ( search ) => {
-   console.log(search, "pic ");
+  
    setSearch(search);
    setItems([]);
    setPage(1);   

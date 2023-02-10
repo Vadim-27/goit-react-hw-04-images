@@ -10,7 +10,6 @@ const Searchbar = ({ onSubmit }) => {
   const handleChange = ({ target }) => {
     const { value } = target;
 
-    console.log(value);
     setSearch(value);
   };
   const handleSubmit = e => {
@@ -23,35 +22,32 @@ const Searchbar = ({ onSubmit }) => {
 
     reset();
   };
-  console.log();
+
   const reset = () => {
     setSearch('');
   };
 
   return (
-    console.log(search, 'tot search'),
-    (
-      <header className={css.searchbar}>
-        <form className={css.searchForm} onSubmit={handleSubmit}>
-          <button type="submit" className={css.searchFormButton}>
-            <span className={css.searchFormButtonLabel}>
-              <FcSearch />
-            </span>
-          </button>
+    <header className={css.searchbar}>
+      <form className={css.searchForm} onSubmit={handleSubmit}>
+        <button type="submit" className={css.searchFormButton}>
+          <span className={css.searchFormButtonLabel}>
+            <FcSearch />
+          </span>
+        </button>
 
-          <input
-            value={search}
-            name="search"
-            onChange={handleChange}
-            className={css.searchFormiInput}
-            type="text"
-            autoComplete="off"
-            autoFocus
-            placeholder="Search images and photos"
-          />
-        </form>
-      </header>
-    )
+        <input
+          value={search}
+          name="search"
+          onChange={handleChange}
+          className={css.searchFormiInput}
+          type="text"
+          autoComplete="off"
+          autoFocus
+          placeholder="Search images and photos"
+        />
+      </form>
+    </header>
   );
 };
 
